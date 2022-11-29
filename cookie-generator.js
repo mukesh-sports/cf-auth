@@ -1,8 +1,8 @@
 const AWS = require('aws-sdk');
 
 const cloudFront = new AWS.CloudFront.Signer(
-    process.env.PUBLIC_KEY,
-    process.env.PRIVATE_KEY
+    "process.env.PUBLIC_KEY",
+    "process.env.PRIVATE_KEY"
 );
 
 const generateCookie = (domain) => {
@@ -26,7 +26,7 @@ const generateCookie = (domain) => {
 
     return cookie;
 }
-
-module.exports = {
-    generateCookie
-}
+generateCookie('test.com')
+// module.exports = {
+//     generateCookie
+// }
